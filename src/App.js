@@ -10,7 +10,16 @@ import { TextField } from "@material-ui/core";
 import { makeStyles, ThemeProvider } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core";
 import { orange } from "@material-ui/core/colors";
-import { Typography, Container, Paper, Grid } from "@material-ui/core";
+import {
+  Typography,
+  Container,
+  Paper,
+  Grid,
+  AppBar,
+  Toolbar,
+  IconButton,
+} from "@material-ui/core";
+import { Menu as MenuIcon } from "@material-ui/icons";
 import "fontsource-roboto";
 
 const useStyles = makeStyles({
@@ -58,6 +67,15 @@ function App() {
       <Container maxWidth="sm">
         <div className="App">
           <header className="App-header">
+            <AppBar>
+              <Toolbar>
+                <IconButton>
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h6">MUI Theming</Typography>
+                <Button>Login</Button>
+              </Toolbar>
+            </AppBar>
             <Typography variant="h1">Welcome to MUI</Typography>
             <Typography variant="subtitle1">Lear the MUI</Typography>
             <ButtonStyled />
